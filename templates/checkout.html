@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Checkout</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo-container">
+
+<img src="{{ url_for('static',
+filename='images/logo.jpeg') }}"
+class="nav-logo">
+
+<div class="logo-text">
+Virelle & Co.
+</div>
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+<li><a href="/products">Collection</a></li>
+<li><a href="/login">Login</a></li>
+<li><a href="/register">Register</a></li>
+
+</ul>
+
+</nav>
+
+<!-- CHECKOUT -->
+
+<div class="checkout-container">
+
+<h1>Checkout</h1>
+
+<div class="checkout-product">
+
+<img src="{{ url_for('static',
+filename='images/signature-kit.jpeg') }}">
+
+<div>
+
+<h2>Virelle Signature Ritual Kit</h2>
+
+<p>₹249 per kit</p>
+
+</div>
+
+</div>
+
+<form method="POST">
+
+<input type="text"
+name="customer_name"
+placeholder="Full Name"
+required>
+
+<textarea
+name="address"
+placeholder="Shipping Address"
+required></textarea>
+
+<div class="quantity-container">
+
+<label>Quantity</label>
+
+<div class="quantity-box">
+
+<button type="button"
+class="qty-btn"
+onclick="decreaseQty()">
+
+-
+
+</button>
+
+<input type="number"
+id="quantity"
+name="quantity"
+value="1"
+min="1"
+readonly>
+
+<button type="button"
+class="qty-btn"
+onclick="increaseQty()">
+
++
+
+</button>
+
+</div>
+
+</div>
+
+<div class="total-container">
+
+<h2>
+Total:
+<span id="total-price">₹249</span>
+</h2>
+
+</div>
+
+<input type="hidden"
+name="total"
+id="hidden-total"
+value="249">
+
+<select name="payment_method">
+
+<option>UPI</option>
+<option>Credit/Debit Card</option>
+<option>Cash On Delivery</option>
+
+</select>
+
+<button type="submit"
+class="btn">
+
+Place Order
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+const productPrice = 249;
+
+function updateTotal(){
+
+    let quantity =
+    document.getElementById("quantity").value;
+
+    let total =
+    quantity * productPrice;
+
+    document.getElementById(
+    "total-price").innerText =
+    "₹" + total;
+
+    document.getElementById(
+    "hidden-total").value = total;
+
+}
+
+function increaseQty(){
+
+    let qtyInput =
+    document.getElementById("quantity");
+
+    qtyInput.value =
+    parseInt(qtyInput.value) + 1;
+
+    updateTotal();
+
+}
+
+function decreaseQty(){
+
+    let qtyInput =
+    document.getElementById("quantity");
+
+    if(parseInt(qtyInput.value) > 1){
+
+        qtyInput.value =
+        parseInt(qtyInput.value) - 1;
+
+        updateTotal();
+
+    }
+
+}
+
+</script>
+
+<script src="{{ url_for('static',
+filename='js/script.js') }}"></script>
+
+</body>
+</html>

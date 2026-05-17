@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: virelle-co
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app

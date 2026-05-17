@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Virelle & Co.</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo-container">
+
+        <img src="{{ url_for('static',
+        filename='images/logo.jpeg') }}"
+        class="nav-logo">
+
+        <div class="logo-text">
+            Virelle & Co.
+        </div>
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/products">Collection</a></li>
+
+        <li><a href="/login">Login</a></li>
+
+        <li><a href="/register">Register</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            Luxury Mehendi Ritual Kits
+        </h1>
+
+        <p>
+            Crafted beautifully for brides & celebrations
+        </p>
+
+        <a href="/products" class="btn">
+            Explore Collection
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+    <div class="about-card">
+
+        <h2>Signature Luxury</h2>
+
+        <p>
+            Premium handcrafted mehendi experience.
+        </p>
+
+    </div>
+
+    <div class="about-card">
+
+        <h2>Natural Ingredients</h2>
+
+        <p>
+            Botanical ingredients with rich stain.
+        </p>
+
+    </div>
+
+    <div class="about-card">
+
+        <h2>Luxury Packaging</h2>
+
+        <p>
+            Elegant bridal inspired packaging.
+        </p>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static',
+filename='js/script.js') }}"></script>
+
+</body>
+</html>
