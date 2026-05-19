@@ -775,3 +775,37 @@ select:focus{
     }
 
 }
+/* SOCIAL CONTACT */
+
+.social-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    transition:0.4s;
+    color:inherit;
+}
+
+.social-card:hover{
+    transform:translateY(-10px);
+}
+
+.social-card img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.social-card h2{
+    color:#234b32;
+    font-size:38px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.social-card p{
+    color:#666;
+    font-size:18px;
+}
