@@ -696,8 +696,12 @@ select:focus{
 
 .contact-container{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:30px;
+
     padding:80px;
 }
 
@@ -758,20 +762,19 @@ select:focus{
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:1100px){
+
+    .contact-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
 
     .contact-container{
         grid-template-columns:1fr;
         padding:20px;
-    }
-
-    .location-container{
-        padding:20px;
-    }
-
-    .contact-content h1,
-    .location-content h1{
-        font-size:50px;
     }
 
 }
@@ -779,7 +782,7 @@ select:focus{
 
 .social-card{
     background:white;
-    padding:40px;
+    padding:35px 20px;
     border-radius:25px;
     text-align:center;
     text-decoration:none;
@@ -801,11 +804,13 @@ select:focus{
 
 .social-card h2{
     color:#234b32;
-    font-size:38px;
+    font-size:32px;
     font-family:'Cormorant Garamond', serif;
+    margin-bottom:15px;
 }
 
 .social-card p{
     color:#666;
     font-size:18px;
+    line-height:1.6;
 }
