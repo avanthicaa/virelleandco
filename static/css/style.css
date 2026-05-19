@@ -534,3 +534,244 @@ select:focus{
     }
 
 }
+/* HOW TO USE PAGE */
+
+.usage-hero{
+    height:60vh;
+    background-image:url("/static/images/banner.png");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.usage-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.72);
+    backdrop-filter:blur(2px);
+}
+
+.usage-hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.usage-hero-content h1{
+    font-size:80px;
+    color:#234b32;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.usage-hero-content p{
+    font-size:26px;
+    color:#5a3b24;
+}
+
+/* STEPS */
+
+.steps-container{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    padding:80px;
+}
+
+.step-card{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.06);
+    transition:0.4s;
+}
+
+.step-card:hover{
+    transform:translateY(-8px);
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+.step-card img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.step-content{
+    flex:1;
+}
+
+.step-content h2{
+    font-size:48px;
+    color:#234b32;
+    font-family:'Cormorant Garamond', serif;
+    margin-bottom:15px;
+}
+
+.step-content p{
+    font-size:20px;
+    color:#666;
+    line-height:1.9;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .steps-container{
+        padding:20px;
+    }
+
+    .step-card,
+    .reverse{
+        flex-direction:column;
+    }
+
+    .step-card img{
+        width:100%;
+        height:auto;
+    }
+
+    .usage-hero-content h1{
+        font-size:50px;
+    }
+
+    .step-content h2{
+        font-size:36px;
+    }
+
+}
+/* CONTACT & LOCATION HERO */
+
+.contact-hero,
+.location-hero{
+    height:55vh;
+    background-image:url("/static/images/banner.png");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-overlay,
+.location-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.72);
+    backdrop-filter:blur(2px);
+}
+
+.contact-content,
+.location-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.contact-content h1,
+.location-content h1{
+    font-size:80px;
+    color:#234b32;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.contact-content p,
+.location-content p{
+    font-size:24px;
+    color:#5a3b24;
+}
+
+/* CONTACT */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:80px;
+}
+
+.contact-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    transition:0.4s;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact-card h2{
+    color:#234b32;
+    font-size:38px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.contact-card p{
+    color:#666;
+    font-size:20px;
+}
+
+/* LOCATION */
+
+.location-container{
+    padding:80px;
+}
+
+.location-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    margin-bottom:40px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.location-card h2{
+    color:#234b32;
+    font-size:42px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.location-card p{
+    color:#666;
+    font-size:22px;
+    line-height:2;
+}
+
+.map-container iframe{
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .location-container{
+        padding:20px;
+    }
+
+    .contact-content h1,
+    .location-content h1{
+        font-size:50px;
+    }
+
+}

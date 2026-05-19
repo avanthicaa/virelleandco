@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Location | Virelle & Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo-container">
+
+<img src="{{ url_for('static',
+filename='images/logo.jpeg') }}"
+class="nav-logo">
+
+<div class="logo-text">
+Virelle & Co.
+</div>
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+<li><a href="/products">Collection</a></li>
+<li><a href="/how-to-use">How To Use</a></li>
+<li><a href="/location">Location</a></li>
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- LOCATION HERO -->
+
+<section class="location-hero">
+
+<div class="location-overlay"></div>
+
+<div class="location-content">
+
+<h1>Visit Us</h1>
+
+<p>
+Luxury mehendi rituals crafted with elegance.
+</p>
+
+</div>
+
+</section>
+
+<!-- LOCATION SECTION -->
+
+<section class="location-container">
+
+<div class="location-card">
+
+<h2>Our Studio</h2>
+
+<p>
+Virelle & Co.<br>
+Chennai, Tamil Nadu<br>
+India
+</p>
+
+</div>
+
+<div class="map-container">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18..."
+width="100%"
+height="400"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+</body>
+</html>

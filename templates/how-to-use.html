@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>How To Use | Virelle & Co.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo-container">
+
+        <img src="{{ url_for('static',
+        filename='images/logo.jpeg') }}"
+        class="nav-logo">
+
+        <div class="logo-text">
+            Virelle & Co.
+        </div>
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Collection</a></li>
+        <li><a href="/how-to-use">How To Use</a></li>
+        <li><a href="/login">Login</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="usage-hero">
+
+    <div class="usage-overlay"></div>
+
+    <div class="usage-hero-content">
+
+        <h1>
+            The Virelle Ritual
+        </h1>
+
+        <p>
+            A luxurious mehendi experience crafted
+            for brides and celebrations.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- STEPS -->
+
+<section class="steps-container">
+
+    <!-- STEP 1 -->
+
+    <div class="step-card">
+
+        <img src="{{ url_for('static',
+        filename='images/kit1.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 1 — Prep Your Skin</h2>
+
+            <p>
+                Wash your hands thoroughly and avoid
+                applying lotions or oils before mehendi.
+                Clean skin helps achieve a darker stain.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 2 -->
+
+    <div class="step-card reverse">
+
+        <img src="{{ url_for('static',
+        filename='images/kit2.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 2 — Apply Mehendi</h2>
+
+            <p>
+                Use the premium Virelle cones to create
+                elegant bridal or festive designs with
+                smooth and effortless flow.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 3 -->
+
+    <div class="step-card">
+
+        <img src="{{ url_for('static',
+        filename='images/kit3.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 3 — Apply Essential Oil</h2>
+
+            <p>
+                Dab a few drops of essential oil before
+                and after drying to deepen the stain
+                naturally and enhance longevity.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 4 -->
+
+    <div class="step-card reverse">
+
+        <img src="{{ url_for('static',
+        filename='images/kit4.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 4 — Use Sealant Spray</h2>
+
+            <p>
+                Spray lightly over dried mehendi to lock
+                moisture and keep the paste intact for
+                richer color development.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 5 -->
+
+    <div class="step-card">
+
+        <img src="{{ url_for('static',
+        filename='images/kit5.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 5 — Mehendi Dip</h2>
+
+            <p>
+                Carefully apply the mehendi dip to
+                intensify the final bridal stain and
+                achieve a luxurious deep finish.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- STEP 6 -->
+
+    <div class="step-card reverse">
+
+        <img src="{{ url_for('static',
+        filename='images/kit6.jpeg') }}">
+
+        <div class="step-content">
+
+            <h2>Step 6 — Aftercare Balm</h2>
+
+            <p>
+                Apply the balm after removing dried
+                mehendi to nourish your skin and
+                preserve stain richness beautifully.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static',
+filename='js/script.js') }}"></script>
+
+</body>
+</html>

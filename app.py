@@ -119,6 +119,19 @@ def checkout():
 
     return render_template('checkout.html')
 
+@app.route('/how-to-use')
+def how_to_use():
+    return render_template('how-to-use.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/location')
+def location():
+    return render_template('location.html')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
